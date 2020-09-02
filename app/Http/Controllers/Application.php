@@ -101,7 +101,7 @@ class Application extends Controller
     {
 
         $user = User::findOrFail($user_id);
-        $post = Post::findOrFail($post_id);
+//        $post = Post::findOrFail($post_id);
 
         $user->posts()->attach($post_id);
     }
@@ -109,7 +109,7 @@ class Application extends Controller
     public function detaching($user_id, $post_id)
     {
         $user = User::findOrFail($user_id);
-        $post = Post::findOrFail($post_id);
+//        $post = Post::findOrFail($post_id);
 
         $user->posts()->detach($post_id);
     }
