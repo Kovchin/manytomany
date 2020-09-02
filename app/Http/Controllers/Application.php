@@ -101,7 +101,7 @@ class Application extends Controller
     {
 
         $user = User::findOrFail($user_id);
-        $post = Post::findOrFail($post_id);
+//        $post = Post::findOrFail($post_id);
 
         $user->posts()->attach($post_id);
     }
